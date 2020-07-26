@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Создаем техблог за вечер с CD pipeline и блэкджеком - jekurb</title><link rel="icon" type="image/png" href=https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="Создаем техблог за вечер с CD pipeline и блэкджеком">
+<meta itemprop="description" content="Вчера вечером в очередной раз понял, что хочу завести свой технический блог. В прошлом уже были неудачные попытки, когда интерес к этой затее терялся.">
+<meta itemprop="datePublished" content="2020-07-23T22:47:00&#43;03:00" />
+<meta itemprop="dateModified" content="2020-07-23T22:47:00&#43;03:00" />
+<meta itemprop="wordCount" content="1076">
+
+
+
+<meta itemprop="keywords" content="github,blog," /><meta property="og:title" content="Создаем техблог за вечер с CD pipeline и блэкджеком" />
+<meta property="og:description" content="Вчера вечером в очередной раз понял, что хочу завести свой технический блог. В прошлом уже были неудачные попытки, когда интерес к этой затее терялся." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jekurb.dev/posts/blog-kick-off/" />
+<meta property="article:published_time" content="2020-07-23T22:47:00+03:00" />
+<meta property="article:modified_time" content="2020-07-23T22:47:00+03:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Создаем техблог за вечер с CD pipeline и блэкджеком"/>
+<meta name="twitter:description" content="Вчера вечером в очередной раз понял, что хочу завести свой технический блог. В прошлом уже были неудачные попытки, когда интерес к этой затее терялся."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://jekurb.dev/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://jekurb.dev/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://jekurb.dev/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://jekurb.dev/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://jekurb.dev/">
+				<img src="https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg" alt="jekurb" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://jekurb.dev/">jekurb</a></h1>
+	<div class="site-description"><p>Technologies. Dev productivity. Continues Improvements.</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/eugenix" title="Github"><i data-feather="github"></i></a></li><li><a href="https://twitter.com/eugenixus" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="mailto:eugene.kurbatov@gmail.com" title="Email"><i data-feather="mail"></i></a></li></ul>
+		</nav><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+					<div class="meta">
+						<div class="date">
+							<span class="day">23</span>
+							<span class="rest">Jul 2020</span>
+						</div>
+					</div>
+				
+				<div class="matter">
+					<h1 class="title">Создаем техблог за вечер с CD pipeline и блэкджеком</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p><img src="images/tech-blog.png" alt="image alt text"></p>
+<p>Вчера вечером <del>в очередной раз</del> понял, что хочу завести свой технический блог. В прошлом уже были неудачные попытки,
+когда интерес к этой затее терялся. Но мы же оптимисты - и в этот в раз все будет по-другому! 💪 Дабы не растерять
+запал решил как можно быстрее сделать первый шаг - зарелизить платформу для блога.</p>
+<p>Итак, начнем с требований:</p>
+<ul>
+<li>Простота написания контента</li>
+<li>Минималистичный дизайн</li>
+<li>Хранение всего в системе контроля версий, можно это назвать подходом - Blog as Code</li>
+<li>Простота и бесплатность хостинга</li>
+<li>Простое и уникальное доменное имя</li>
+<li>CD pipeline со smoke-тестами и выкладкой на хостинг по коммиту</li>
+</ul>
+<p>Думаю, для технического блога программиста самое оно 😉</p>
+<h3 id="простота-написания-контента">Простота написания контента</h3>
+<p>Для этого удобно использовать старый добрый markdown и статический генератор на основе него. Перечислю основные проекты:</p>
+<ul>
+<li><a href="http://jekyllrb.com">Jekyll</a></li>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+<li><a href="https://gatsby.js">Gatsby</a>,  <a href="https://next.js">Next.js</a> - новомодные на React</li>
+</ul>
+<p>В итоге в результате беглого сравнения мой выбор пал на Hugo, понравилась документация, много звезд на github,
+более производительный так как написан на Go (как заявляет автор &lt; 1 ms per page).</p>
+<p>Следуя <a href="https://gohugo.io/getting-started/quick-start/">Quick start guide</a> легко создаем основу блога и первый контент.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
+hugo new site jekurb
+hugo new posts/blog-kick-off/index.md
+hugo server -D
+</code></pre></div><h3 id="минималистичный-дизайн">Минималистичный дизайн</h3>
+<p>Основной фокус блога будет на контенте, поэтому в дизайне и функциональности не должно быть ничего лишнего.
+У Hugo есть <a href="https://themes.gohugo.io/">отдельный репозиторий</a> с темами. Мой топ-3 тем для блога:</p>
+<ol>
+<li><a href="https://themes.gohugo.io/hugo-ink/">Hugo Ink</a></li>
+<li><a href="https://themes.gohugo.io/hugo-vitae/">Hugo Vitae</a></li>
+<li><a href="https://themes.gohugo.io/LoveIt/">LoveIt</a></li>
+</ol>
+<p>С большой долей вероятности в теме в будущем будут какие-то кастомные правки, поэтому лучше класть в <em>/themes</em> ее
+как не как git module, а просто скачав исходный код. Для активации темы в <em>config.toml</em> добавляем:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">theme = <span style="color:#2aa198">&#34;hugo-ink&#34;</span>
+</code></pre></div><h3 id="blog-as-code">Blog as Code</h3>
+<p>В моем случае все будет храниться в <a href="https://github.com/eugenix/jekurb-blog">репозитории</a> на github.
+Не забываем добавить в .gitignore все то, что генерится Hugo.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">public
+.idea
+resources/_gen
+</code></pre></div><p>Немного о структуре директорий Hugo</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.
+├── archetypes   | архетипы, на основе который будут создаваться блог посты с помощью команды hugo new
+├── config.toml  | основной конфигурационный файл
+├── content      | контент в виде md файлов, структура может быть вложенной
+├── data         | конфигурационные файлы для генерации
+├── layouts      | шаблоны для страниц
+├── public       | сборка сайта
+├── resources    | кэш
+├── static       | статичные файлы, копируются при генерации
+└── themes       | установленные темы
+</code></pre></div><h3 id="простота-и-бесплатность-хостинга">Простота и бесплатность хостинга</h3>
+<p>Давно известно, у github есть замечательная фича <a href="https://pages.github.com/">Gihub pages</a>, которая позволяет хостить
+статический сайт напрямую из репозитория. И да, это бесплатно.
+Поэтому заведем <a href="https://github.com/eugenix/eugenix.github.io">второй репозиторий</a> для &ldquo;релизного билда&rdquo; блога.</p>
+<h3 id="доменное-имя">Доменное имя</h3>
+<p>После некоторых раздумий, было выбрано доменное имя <strong>jekurb.dev</strong> и успешно зарегистрированно на reg.ru.
+Стоимость регистрации в этой зоне - 1392 RUB за год.
+Следующим шагом будет custom domains в
+<a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">Github pages</a>,
+для этого переходим в настройки репозитория.
+<img src="images/custom-domain.png" alt="image custom domain">
+Альтернативный способ установки поля Custom domain - создание CNAME в репозитории.
+Далее идем к регистратору и настаиваем DNS записи, настроим CNAME для сабдомена www, указывающую на eugenix.github.io
+и A records для amex домена.
+<img src="images/dns.png" alt="image dns">
+Примерно через 4 часа DNS обновился и блог стал доступен по домену. На всякий случай проверяем, все ли корректно встало:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig www.jekurb.dev +nostats +nocomments +nocmd
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; www.jekurb.dev +nostats +nocomments +nocmd
+;; global options: +cmd
+;www.jekurb.dev.			IN	A
+www.jekurb.dev.		21599	IN	CNAME	eugenix.github.io.
+eugenix.github.io.	3599	IN	A	185.199.109.153
+eugenix.github.io.	3599	IN	A	185.199.108.153
+eugenix.github.io.	3599	IN	A	185.199.111.153
+eugenix.github.io.	3599	IN	A	185.199.110.153
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig jekurb.dev +noall +answer
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; jekurb.dev +noall +answer
+;; global options: +cmd
+jekurb.dev.		21599	IN	A	185.199.108.153
+jekurb.dev.		21599	IN	A	185.199.109.153
+jekurb.dev.		21599	IN	A	185.199.110.153
+jekurb.dev.		21599	IN	A	185.199.111.153
+</code></pre></div><h3 id="cd-pipeline">CD pipeline</h3>
+<p>Цель CD pipeline автоматизировать процесс релизов новых статей в блоге. Хотелось бы иметь следующий workflow:</p>
+<ul>
+<li>Автор делает push с изменениями в /master</li>
+<li>На билд-машине выполняется чекаут ветки</li>
+<li>Производится статический анализ markdown файлов</li>
+<li>Производится сборка сайта Hugo и push в /master Github Pages</li>
+<li>Выполняются smoke e2e тесты: все страницы открываются, посты отдаются, sitemap сгенерирован и тд.</li>
+<li>В случае ошибки на этапе тестов необходимо откатить изменения (пока не реализовано)</li>
+</ul>
+<p>Ранее для этого можно было бы использовать какой-нибудь Travis CI, но с появлением
+<a href="https://github.com/features/actions">Actions</a> в Github надобность отпала.
+Для публичных репозиториев это бесплатно (We love open source 🥰), для приватных квота 2000 минут в месяц,
+затем $0.008 за минуту.</p>
+<p>Так же нам нужен какой-то линтер для markdown файлов, конечно же решение уже есть в npm. Называется
+<a href="https://github.com/igorshubovych/markdownlint-cli">markdownlint-cli</a> и позволяет проверять по
+<a href="https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md">заданному списку правил</a>.
+Правила можно настроить под себя в файлике .markdownlint.json</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#268bd2">&#34;default&#34;</span>: <span style="color:#cb4b16">true</span>,
+  <span style="color:#268bd2">&#34;no-hard-tabs&#34;</span>: <span style="color:#cb4b16">false</span>,
+  <span style="color:#268bd2">&#34;MD013&#34;</span>: { <span style="color:#268bd2">&#34;line_length&#34;</span>: <span style="color:#2aa198">130</span> }
+}
+</code></pre></div><p>Для запуска вызвать</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">markdownlint-cli content
+
+content/posts/blog-kick-off/index.md:167:98 MD009/no-trailing-spaces Trailing spaces <span style="color:#719e07">[</span>Expected: <span style="color:#2aa198">0</span> or 2; Actual: 1<span style="color:#719e07">]</span>
+content/posts/blog-kick-off/index.md:168 MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines <span style="color:#719e07">[</span>Context: <span style="color:#2aa198">&#34;```yaml&#34;</span><span style="color:#719e07">]</span>
+</code></pre></div><p>Сборка и выкладка сайта будет производиться с помощью уже готового
+Action <a href="https://github.com/benmatselby/hugo-deploy-gh-pages">hugo-deploy-gh-pages</a>. Так как push будет в другой
+репозиторий, нам понадобится GitHub access token. Создаем новый токен в <em>Account Settings -&gt; Developer Settings -&gt; Personal
+Acess tokens</em> с правами на репозиторий. Далее идем в настройки основного репозитория jekurb-blog -&gt; Secrets, создаем
+секрет PERSONAL_TOKEN со значением токена. Прокидываем его в соответствующий step:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#719e07">env</span>:
+  <span style="color:#719e07">TOKEN</span>: ${{ secrets.PERSONAL_TOKEN }}
+</code></pre></div><p>Остались smoke-тесты. Решение так же нашлось в npm. Mocha/chai - для тестирования и ассертации, cheerio/supertest - для
+запросов и скрапинга страниц.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#268bd2">&#34;devDependencies&#34;</span>: {
+        <span style="color:#268bd2">&#34;chai&#34;</span>: <span style="color:#2aa198">&#34;^4.2.0&#34;</span>,
+        <span style="color:#268bd2">&#34;mocha&#34;</span>: <span style="color:#2aa198">&#34;^8.0.1&#34;</span>,
+        <span style="color:#268bd2">&#34;npm&#34;</span>: <span style="color:#2aa198">&#34;^6.14.6&#34;</span>,
+        <span style="color:#268bd2">&#34;supertest&#34;</span>: <span style="color:#2aa198">&#34;^4.0.2&#34;</span>,
+        <span style="color:#268bd2">&#34;cheerio&#34;</span>: <span style="color:#2aa198">&#34;^1.0.0-rc.3&#34;</span>
+    }
+}
+</code></pre></div><p>Пример теста приведен ниже, запускать через <code>cd smoke-tests &amp;&amp; npm test</code></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#2aa198">&#39;use strict&#39;</span>;
+
+<span style="color:#268bd2">const</span> chai <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;chai&#39;</span>);
+<span style="color:#268bd2">const</span> request <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;supertest&#39;</span>);
+<span style="color:#268bd2">const</span> cheerio <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;cheerio&#39;</span>);
+<span style="color:#268bd2">const</span> blog <span style="color:#719e07">=</span> process.env.BLOG_BASE_URL;
+
+<span style="color:#268bd2">const</span> expect <span style="color:#719e07">=</span> chai.expect;
+
+describe(<span style="color:#2aa198">&#39;Smoke tests&#39;</span>, <span style="color:#268bd2">function</span>() {
+    describe(<span style="color:#2aa198">&#39;# Request Home&#39;</span>, <span style="color:#268bd2">function</span>() {
+        it(<span style="color:#2aa198">&#39;should return at least 1 posts&#39;</span>, <span style="color:#268bd2">function</span>(done) {
+            request(blog)
+                .get(<span style="color:#2aa198">&#39;/&#39;</span>)
+                .end(<span style="color:#268bd2">function</span>(err, res) {
+                    expect(res.statusCode).to.equal(<span style="color:#2aa198">200</span>);
+                    <span style="color:#268bd2">var</span> $ <span style="color:#719e07">=</span> cheerio.load(res.text);
+                    expect($(<span style="color:#2aa198">&#39;div.post&#39;</span>).length).to.be.at.least(<span style="color:#2aa198">1</span>);
+                    done();
+                });
+        });
+    });
+});
+</code></pre></div><p>Конечный файл с описанием pipline создается в <em>.github/workflows/main.yml</em> и выглядит как-то так&hellip;</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#719e07">name</span>: Deploy to GitHub Pages on push to master
+<span style="color:#719e07">on</span>:
+  <span style="color:#719e07">push</span>:
+    <span style="color:#719e07">branches</span>:
+      - master
+<span style="color:#719e07">jobs</span>:
+  <span style="color:#719e07">build</span>:
+    <span style="color:#719e07">name</span>: Deploy
+    <span style="color:#719e07">runs-on</span>: ubuntu-latest
+    <span style="color:#719e07">steps</span>:
+      - <span style="color:#719e07">name</span>: Checkout master
+        <span style="color:#719e07">uses</span>: actions/checkout@v1
+
+      - <span style="color:#719e07">name</span>: Setup node
+        <span style="color:#719e07">uses</span>: actions/setup-node@v1
+        <span style="color:#719e07">with</span>:
+          <span style="color:#719e07">node-version</span>: <span style="color:#2aa198">&#39;12.x&#39;</span>
+
+      - <span style="color:#719e07">name</span>: Setup markdownlint-cli
+        <span style="color:#719e07">run</span>: npm install -g markdownlint-cli
+
+      - <span style="color:#719e07">name</span>: Check markdown
+        <span style="color:#719e07">run</span>: markdownlint content
+
+      - <span style="color:#719e07">name</span>: Deploy the site
+        <span style="color:#719e07">uses</span>: benmatselby/hugo-deploy-gh-pages@master
+        <span style="color:#719e07">env</span>:
+          <span style="color:#719e07">HUGO_VERSION</span>: <span style="color:#2aa198">0.74.2</span>
+          <span style="color:#719e07">TARGET_REPO</span>: eugenix/eugenix.github.io
+          <span style="color:#719e07">TOKEN</span>: ${{ secrets.PERSONAL_TOKEN }}
+          <span style="color:#719e07">HUGO_ARGS</span>: <span style="color:#2aa198">&#39;&#39;</span>
+          <span style="color:#719e07">CNAME</span>: jekurb.dev
+
+      - <span style="color:#719e07">name</span>: Run smoke tests
+        <span style="color:#719e07">env</span>:
+          <span style="color:#719e07">BLOG_BASE_URL</span>: https://jekurb.dev
+        <span style="color:#719e07">run</span>: cd smoke-tests <span style="color:#719e07">&amp;&amp;</span> npm install <span style="color:#719e07">&amp;&amp;</span> npm test
+</code></pre></div><h3 id="выводы">Выводы</h3>
+<p>Во-первых, стоит отметить, что 99% всего того, что использовалось, начиная движком для блога и заканчивая инфраструктурой
+для pipeline и хостингом есть на github.</p>
+<p>Во-вторых, результатом я оказался доволен и смог доказать что поднять свой блог с CD pipeline&rsquo;ом и блэкджеком не
+имея особого опыта в &ldquo;блогостроении&rdquo; можно за несколько часов. Главное сделать первый шаг, а дальше процесс вас затянет.</p>
+
+			</div>
+
+			<div class="tags">
+				
+					
+						<ul class="flat">
+							
+							<li><a href="/tags/github">github</a></li>
+							
+							<li><a href="/tags/blog">blog</a></li>
+							
+						</ul>
+					
+				
+			</div></div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2020  © Copyright, Eugeniy Kurbatov </div>
+	</nav>
+</div>
+
+<script>feather.replace()</script>
+</body>
+</html>
